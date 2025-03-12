@@ -1,0 +1,107 @@
+body {
+    background: url('../img/equipo/bamboo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.main-content {
+    width: 66%;
+    margin:0 17%;
+}
+
+h3, li {
+    font-size: 1.2rem;
+}
+
+h2, h3 {
+    text-decoration: underline;
+}
+p {font-size: 1.2rem;text-align: justify;}
+
+#principal {
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+#principal a {
+    text-decoration: none;
+}
+
+
+#principal a, #principal p  {  
+    color: #ffffff;
+   
+}
+
+#principal p  {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 1.3 rem;
+    font-weight: 500;
+}
+
+.voluntarias {
+    font-size: 1.3 rem;
+}
+
+#resumen {
+    text-align: left;
+}
+
+#resumen .voluntarias h1 {
+    text-align:left;
+}
+
+#personas-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    flex-wrap: wrap;
+}
+
+#personas-container > a {
+    text-decoration: none;
+}
+
+.personas:hover {
+    opacity: 0.7;
+}
+
+img {
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    
+}
+
+.personas {
+    position: relative;  
+    width: 300px;        
+    height: 200px;
+}
+
+.personas-nombre {
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;               
+    left: 10px;                 
+    background: rgba(0, 0, 0, 0.6);  
+    color: white;              
+    padding: 5px 10px;        
+    border-radius: 5px;     
+    display: inline-block;     
+    box-sizing: border-box;    
+    text-align: left;         
+}
+
+.voluntarias {
+    background: none repeat scroll rgb(0,0,0,0.5);
+    margin-left: 5px;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+}
+
+.voluntarias h2,.voluntarias p {
+    opacity: 1;
+}
