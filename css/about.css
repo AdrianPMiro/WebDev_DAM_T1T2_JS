@@ -1,0 +1,179 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: url('../img/home/atardecer.jpg') no-repeat center center fixed;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .logo a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.container {
+    width: 70%;
+    margin: 5vh auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#voluntarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.voluntarias {
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.voluntarias h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.voluntarias p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.voluntarias ul {
+    margin-left: 20px;
+}
+
+.voluntarias li {
+    margin-bottom: 10px;
+}
+
+img {
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.voluntarias img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.voluntarias h3 {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-top: auto; 
+}
+
+.container-left {
+    width: 35%;
+    margin-left: 2%; 
+    margin-top: 9vh;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+    text-align: justify;
+}
+
+.container-left h1, .container-left h2 {
+    text-align: left; 
+    margin-bottom: 15px;
+}
+
+.container-left ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.container-left li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.container-left p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 800px) {
+    .container-left {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .container-left h1 {
+        font-size: 1.8rem;
+    }
+}

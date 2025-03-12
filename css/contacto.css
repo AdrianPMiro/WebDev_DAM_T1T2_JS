@@ -1,0 +1,122 @@
+body {
+    background: url('../img/home/sabana.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.main-content h1 {
+    margin-bottom: 5vh;
+}
+
+h1, h2, p {
+    color: white;
+}
+
+.main-content section {
+    width: 66%;
+    margin: 0 auto;
+}
+
+h3, li {
+    font-size: 1.2rem;
+}
+
+h2, h3 {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+#principal {
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    margin-left: 18%;
+}
+
+#t_horarios {
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    margin-right: 53%;
+}
+#horarios {
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+    margin-left: 19%;
+}
+
+#form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+#form-container form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+form .fila {
+    margin-bottom: 30px;
+}
+
+form .fila label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+form .fila select {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid white; 
+    color: white; 
+}
+
+form .fila select option {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+}
+
+form .fila input, form .fila select, form .fila textarea {
+    width: 100%;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+form .fila input::placeholder, form .fila textarea::placeholder {
+    color: #ddd;
+}
+
+form .fila textarea {
+    height: 80px;
+    resize: none;
+}
+
+#btn {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+    background-color: grey;
+    color: white;
+}
