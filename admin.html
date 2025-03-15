@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/contacto.css">
     <script src="js/datos.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/validaciones.js"></script>
 </head>
 <style>
 
@@ -58,7 +59,7 @@ table, th, td {
                 <div class="fila">
                     <label>Voluntario</label>
                     <input id="voluntario" name="voluntario" placeholder="Ingresa tu nombre" /><br>
-                    <p class="error">el campo no puede estar vacio</p>
+                   
                 </div>
 
                 <div class="fila">
@@ -66,8 +67,10 @@ table, th, td {
                     <input id="email" type="email" name="email" placeholder="Ingresa tu correo" />
                 </div>
                 <div class="fila">
-                    <label>Teléfono: (Opcional)</label>
-                    <input id="telefono" type="tel" name="telefono" placeholder="Ingresa tu teléfono" />
+                    <label>Teléfono: </label>
+                    <input  type="tel" name="telefono" id="telefono" onblur="validarTelefono(this)" onfocus="focusTelefono(this)" pattern="[0-9]{3} [0-9]{2} [0-9]{2} [0-9]{2}" 
+                    placeholder="Ingresa tu teléfono" />
+                    <p id="telefono-error" class="error"></p>
                 </div>
                 <div class="fila">
                     <label>Motivo:</label>

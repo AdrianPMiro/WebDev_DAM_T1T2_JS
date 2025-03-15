@@ -11,14 +11,6 @@ const btnAcciones = (index) => {
   return tdEl;
 };
 
-function formatearTelefono(input) {
-  let numbers = input.replace(/\D/g, "");
-  if (numbers.length !== 9) {
-    return "Número inválido";
-  }
-  return numbers.replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
-}
-
 const anadir = () => {
   const voluntario = $("voluntario").value;
   const email = $("email").value;

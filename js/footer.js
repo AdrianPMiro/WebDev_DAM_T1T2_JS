@@ -13,11 +13,11 @@ const menuPaginas = [
 
 const cargarLoadMensaje = () => {
   let loading = document.getElementById("loading-screen");
-  let contenedor = document.getElementById("content");
+  let contenedor = document.getElementsByClassName("main-content")[0];
 
   loading.classList.add("fade-out");
   setTimeout(() => {
-    loadingScreen.style.display = "none";
+    loading.style.display = "none";
     contenedor.style.display = "block";
   }, config.tiempoCarga);
 };
