@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildscape - Rescue and Sanctuary Center</title>
-    <link rel="icon" type="image/x-icon" href="../img/icon.png">
-    <link rel="stylesheet" href="../css/galery.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/galery.css">
     
 </head>
-<body>
+<body onload="loadMenus()">
+
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Cargando...</div>
+    </div>
+    
     <header>
         <div class="logo">
-            <a href="../index.html">Wildscape</a>
+            <a href="index.html">Wildscape</a>
         </div>
         <nav>
-            <a href="about.html">Quienes somos</a>
-            <a href="rescate.html">Rescate</a>
-            <a href="cuidado.html">Cuidado</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="galery.html">Galeria</a>
-            <a href="admin.html">Admin</a>
+            <!-- Load menus-->
         </nav>
     </header>
 
@@ -30,7 +32,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/impala.jpg" alt="Impala">
+                        <img src="img/galery/impala.jpg" alt="Impala">
                     </div>
                     <div class="card-back">
                         <p>Este pequeño impala fue salvado después de ser atropellado por un auto de safari.</p>
@@ -40,7 +42,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/avestruz.webp" alt="Avestruz">
+                        <img src="img/galery/avestruz.webp" alt="Avestruz">
                     </div>
                     <div class="card-back">
                         <p>Esta amiga emplumada fue rehabilitada después de ser aplastada por un árbol.</p>
@@ -50,7 +52,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/cheta.webp" alt="Guepardo">
+                        <img src="img/galery/cheta.webp" alt="Guepardo">
                     </div>
                     <div class="card-back">
                         <p>Protegemos a los majestuosos guepardos que son altamente codiciados por su pelaje.</p>
@@ -60,7 +62,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/bufalos.webp" alt="Bufalo">
+                        <img src="img/galery/bufalos.webp" alt="Bufalo">
                     </div>
                     <div class="card-back">
                         <p>Criamos sosteniblemente, preservamos y cuidamos a los búfalos.</p>
@@ -71,7 +73,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/rino.webp" alt="Rinoceronte">
+                        <img src="img/galery/rino.webp" alt="Rinoceronte">
                     </div>
                     <div class="card-back">
                         <p>Este rinoceronte fue salvado después de que le intentaran quitar su cuerno.</p>
@@ -81,7 +83,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/giraf.webp" alt="Jirafa">
+                        <img src="img/galery/giraf.webp" alt="Jirafa">
                     </div>
                     <div class="card-back">
                         <p>Velamos por la seguridad y el bienestar de todas las especies.</p>
@@ -91,7 +93,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/leon.webp" alt="Leon">
+                        <img src="img/galery/leon.webp" alt="Leon">
                     </div>
                     <div class="card-back">
                         <p>Mantenemos a los cazadores furtivos lejos del rey de la sabana.</p>
@@ -101,7 +103,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/hipo.webp" alt="Hipo">
+                        <img src="img/galery/hipo.webp" alt="Hipo">
                     </div>
                     <div class="card-back">
                         <p>Procuramos mantener especies peligrosas lejos de comunidades humanas.</p>
@@ -112,7 +114,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/elefan.webp" alt="Elefante">
+                        <img src="img/galery/elefan.webp" alt="Elefante">
                     </div>
                     <div class="card-back">
                         <p>Este joven elefante fue disparado, pero gracias a los esfuerzos de nuestro equipo logró sobrevivir.</p>
@@ -122,7 +124,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/zebra.webp" alt="Cebra">
+                        <img src="img/galery/zebra.webp" alt="Cebra">
                     </div>
                     <div class="card-back">
                         <p>Gestionamos a las poblaciones de cebras y fomentamos la caza sostenible.</p>
@@ -132,7 +134,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/chimp.webp" alt="chimp">
+                        <img src="img/galery/chimp.webp" alt="chimp">
                     </div>
                     <div class="card-back">
                         <p>El pequeño chimpancé perdió a sus padres por culpa de un incendio. Trabajamos también en las áreas forestales cercanas.</p>
@@ -142,7 +144,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/loros.webp" alt="loros">
+                        <img src="img/galery/loros.webp" alt="loros">
                     </div>
                     <div class="card-back">
                         <p>Combatimos de forma activa el tráfico de aves exóticas. Foto de nuestro último rescate</p>
@@ -153,7 +155,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/video22.png" alt="Video1">
+                        <img src="img/galery/video22.png" alt="Video1">
                     </div>
                     <div class="card-back">
                         <p>En este <a href="https://www.youtube.com/watch?v=3_IZBB-MijI&t=38s"> Video</a> aprenderás sobre la importancia de la conservación de las especies.</p>
@@ -163,7 +165,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/video11.png" alt="Video2">
+                        <img src="img/galery/video11.png" alt="Video2">
                     </div>
                     <div class="card-back">
                         <p>En este<a href="https://www.youtube.com/watch?v=a6U6AobyWtw"> video del youtuber Mr.Beast</a> podrás ver la importante labor que conlleva proteger el medio ambiente.</p>
@@ -173,7 +175,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/video33.png" alt="Video3">
+                        <img src="img/galery/video33.png" alt="Video3">
                     </div>
                     <div class="card-back">
                         <p>En este <a href="https://www.youtube.com/watch?v=uPBVCvs91eM"> corto video</a> conocerás los animales más importantes de nuestra área</p>
@@ -183,7 +185,7 @@
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="../img/galery/video4.png" alt="Video4">
+                        <img src="img/galery/video4.png" alt="Video4">
                     </div>
                     <div class="card-back">
                         <p>En el <a href="https://www.youtube.com/watch?v=J5Bj5gyuTEY"> siguiente video</a> podras ver este hermoso santuario encargado de cuidar pequeños elefantes huerfanos</p>
@@ -196,5 +198,6 @@
     <footer>
         &copy; 2024 Wildscape - Todos los derechos reservados.
     </footer>
+    <script src="js/footer.js"></script>
 </body>
 </html>

@@ -1,5 +1,24 @@
 const $ = (id) => document.getElementById(id);
 
+const btnAcciones = (index) => {
+  const tdEl = document.createElement("td");
+  tdEl.setAttribute("style", "width: 250px");
+  const btnAnadir = `<button id="aprobar-${index}" onclick="aprobar(${index})">Aprobar</button>`;
+  const btnRevertir = `<button id="revertir-${index}" onclick="revertir(${index})" disabled>Revertir</button>`;
+  const btnBorrar = `<button id="borrar-${index}"onclick="borrar(${index})">Borrar</button>`;
+
+  tdEl.innerHTML = `<span>${btnAnadir} ${btnRevertir} ${btnBorrar}</span>`;
+  return tdEl;
+};
+
+function formatearTelefono(input) {
+  let numbers = input.replace(/\D/g, "");
+  if (numbers.length !== 9) {
+    return "Número inválido";
+  }
+  return numbers.replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+}
+
 const anadir = () => {
   const voluntario = $("voluntario").value;
   const email = $("email").value;
@@ -10,6 +29,7 @@ const anadir = () => {
   const values = [voluntario, email, telefono, motivo, otros];
   tr = document.createElement("tr");
   const contenedor = document.getElementsByTagName("tbody")[0];
+
   const contador = contenedor.childElementCount;
   tr.id = `tr-${contador}`;
   let tdEl;
@@ -20,14 +40,7 @@ const anadir = () => {
     tdEl.innerHTML = values[i];
     tr.appendChild(tdEl);
   });
-  tdEl = document.createElement("td");
-  tdEl.setAttribute("style", "width: 250px");
-  const btnAnadir = `<button id="aprobar-${contador}" onclick="aprobar(${contador})">Aprobar</button>`;
-  const btnRevertir = `<button id="revertir-${contador}" onclick="revertir(${contador})" disabled>Revertir</button>`;
-  const btnBorrar = `<button id="borrar-${contador}"onclick="borrar(${contador})">Borrar</button>`;
-
-  tdEl.innerHTML = `<span>${btnAnadir} ${btnRevertir} ${btnBorrar}</span>`;
-  tr.appendChild(tdEl);
+  tr.appendChild(btnAcciones(contador));
   contenedor.appendChild(tr);
 };
 
@@ -89,14 +102,7 @@ const crearTabla = (container, data) => {
       tdEl.innerHTML = td[name];
       tr.appendChild(tdEl);
     });
-    tdEl = document.createElement("td");
-    tdEl.setAttribute("style", "width: 250px");
-    const btnAnadir = `<button id="aprobar-${i}" onclick="aprobar(${i})">Aprobar</button>`;
-    const btnRevertir = `<button id="revertir-${i}" onclick="revertir(${i})" disabled>Revertir</button>`;
-    const btnBorrar = `<button id="borrar-${i}"onclick="borrar(${i})">Borrar</button>`;
-
-    tdEl.innerHTML = `<span>${btnAnadir} ${btnRevertir} ${btnBorrar}</span>`;
-    tr.appendChild(tdEl);
+    tr.appendChild(btnAcciones(i));
     tBody.appendChild(tr);
   });
   table.appendChild(tHead);

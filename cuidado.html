@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildscape - Rescue and Sanctuary Center</title>
-    <link rel="icon" type="image/x-icon" href="../img/icon.png">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/cuidado.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cuidado.css">
 </head>
-<body>
+<body  onload="loadMenus()">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Cargando...</div>
+    </div>
+    
+
     <header>
         <div class="logo">
-            <a href="../index.html">Wildscape</a>
+            <a href="index.html">Wildscape</a>
         </div>
         <nav>
-            <a href="about.html">Quienes somos</a>
-            <a href="rescate.html">Rescate</a>
-            <a href="cuidado.html">Cuidado</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="galery.html">Galeria</a>
-            <a href="admin.html">Admin</a>
+            <!-- Load menus-->
         </nav>
     </header>
 
@@ -34,25 +36,25 @@
             <div class="personas">
                 <div class="personas-nombre">Isabela</div>
                 <a href="#Isabela">
-                    <img id="Isabela-img" src="../img/equipo/isabel.webp" />
+                    <img id="Isabela-img" src="img/equipo/isabel.webp" />
                 </a>
             </div>
             <div class="personas">
                 <div class="personas-nombre">Valeria</div>
                 <a href="#Valeria" >
-                    <img src="../img/equipo/valeria.webp" />
+                    <img src="img/equipo/valeria.webp" />
                 </a>  
             </div> 
             <div class="personas">
                 <div class="personas-nombre">Natalia</div>
                 <a href="#Natalia">
-                    <img src="../img/equipo/natalia.webp" />
+                    <img src="img/equipo/natalia.webp" />
                 </a>
             </div>
             <div class="personas">
                 <div class="personas-nombre">Camila</div>
                 <a href="#Camila">
-                    <img src="../img/equipo/camila.webp" />
+                    <img src="img/equipo/camila.webp" />
                 </a>
             </div>
         </section>
@@ -117,6 +119,6 @@
     <footer>
         &copy; 2024 Wildscape - All Rights Reserved.
     </footer>
-   
+    <script src="js/footer.js"></script>
 </body>
 </html>

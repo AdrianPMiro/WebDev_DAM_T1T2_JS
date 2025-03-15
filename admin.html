@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildscape - Rescue and Sanctuary Center</title>
-    <link rel="icon" type="image/x-icon" href="../img/icon.png">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/contacto.css">
-    <script src="../js/datos.js"></script>
-    <script src="../js/index.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="js/datos.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <style>
 
@@ -31,18 +31,20 @@ table, th, td {
 
 
 </style>
-<body>
+<body onload="loadMenus()">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Cargando...</div>
+    </div>
+    
+    
     <header>
         <div class="logo">
-            <a href="../index.html">Wildscape</a>
+            <a href="index.html">Wildscape</a>
         </div>
         <nav>
-            <a href="about.html">Quienes somos</a>
-            <a href="rescate.html">Rescate</a>
-            <a href="cuidado.html">Cuidado</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="galery.html">Galeria</a>
-            <a href="admin.html">Admin</a>
+            <!---Cargar desde loadMenus -->
         </nav>
     </header>
     <div class="main-content">
@@ -56,6 +58,7 @@ table, th, td {
                 <div class="fila">
                     <label>Voluntario</label>
                     <input id="voluntario" name="voluntario" placeholder="Ingresa tu nombre" /><br>
+                    <p class="error">el campo no puede estar vacio</p>
                 </div>
 
                 <div class="fila">
@@ -101,5 +104,6 @@ table, th, td {
 
 
     </script>
+    <script src="js/footer.js"></script>
 </body>
 </html>

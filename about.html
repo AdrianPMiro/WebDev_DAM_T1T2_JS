@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildscape - Rescue and Sanctuary Center</title>
     
-    <link rel="icon" type="image/x-icon" href="../img/icon.png">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     
 </head>
-<body>
+<body onload="loadMenus()">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Cargando...</div>
+    </div>
+
      <header>
         <div class="logo">
-            <a href="../index.html">Wildscape</a>
+            <a href="index.html">Wildscape</a>
         </div>
         <nav>
-            <a href="about.html">Quienes somos</a>
-            <a href="rescate.html">Rescate</a>
-            <a href="cuidado.html">Cuidado</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="galery.html">Galeria</a>
-            <a href="admin.html">Admin</a>
+            <!-- Load menus-->
         </nav>
     </header>
 
@@ -48,5 +50,6 @@
     <footer>
         &copy; 2024 Wildscape. Todos los derechos reservados.
     </footer>
+    <script src="js/footer.js"></script>
 </body>
 </html>

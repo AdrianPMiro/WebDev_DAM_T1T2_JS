@@ -16,6 +16,30 @@ body {
     flex-direction: column;
 }
 
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+    pointer-events: none;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
