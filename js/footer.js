@@ -18,7 +18,7 @@ const cargarLoadMensaje = () => {
   loading.classList.add("fade-out");
   setTimeout(() => {
     loading.style.display = "none";
-    contenedor.style.display = "block";
+    contenedor.style.display = "flex";
   }, config.tiempoCarga);
 };
 

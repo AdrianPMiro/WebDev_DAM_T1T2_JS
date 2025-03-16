@@ -129,3 +129,53 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* Estilos para el menú de voluntarios */
+#local-menu-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #local-menu-container button {
+    background-color: #9ACD32;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .volunteer-menu {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+  
+  .volunteer-menu-item {
+    margin-bottom: 5px;
+  }
+  
+  .volunteer-menu-item > a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .volunteer-submenu {
+    list-style: none;
+    margin: 5px 0 0 10px;
+    padding: 0;
+  }
+  
+  .volunteer-submenu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .volunteer-submenu-item a:hover {
+    text-decoration: underline;
+  }
+  
