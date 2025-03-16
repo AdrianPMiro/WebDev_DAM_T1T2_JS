@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildscape - Rescue and Sanctuary Center</title>
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="js/index.js"></script>
+    <script src="js/validaciones.js"></script>
+</head>
+<body onload="loadMenus()">
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Cargando...</div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">Wildscape</a>
+        </div>
+        <nav>
+            <!-- Load menus -->
+        </nav>
+    </header>
+    <div class="main-content">
+        <section id="principal">
+            <h1>¡Contáctanos para salvar vidas!</h1>
+            <p>Nos dedicamos a rescatar, rehabilitar y reintroducir a la naturaleza animales en situación de vulnerabilidad. Si conoces un caso de un animal que necesita ayuda o quieres sumarte a nuestra causa como voluntario, ¡estamos aquí para escucharte! Tu apoyo puede marcar la diferencia en la conservación de especies!</p>
+            <p>Si quieres contactarnos te invitamos a rellenar el siguiente formulario:</p>
+        </section>
+        <div id="form-container">
+            <form>
+                <div class="fila">
+                    <label>Nombre</label>
+                    <input name="nombre" placeholder="Ingresa tu nombre" /><br>
+                </div>
+                <div class="fila">
+                    <label>Correo electrónico</label>
+                    <input type="email" name="email" placeholder="Ingresa tu correo" />
+                </div>
+                <div class="fila">
+                    <label>Teléfono: (Opcional)</label>
+                    <input type="tel" name="telefono" placeholder="Ingresa tu teléfono" />
+                </div>
+                <div class="fila">
+                    <label>Motivo:</label>
+                    <select>
+                        <option name="1">Reportar un animal en peligro</option>
+                        <option name="2">Información sobre adopción</option>
+                        <option name="3">Ser voluntario</option>
+                        <option name="4">Donar</option>
+                    </select>
+                </div>
+                <div class="fila">
+                    <label>Otros</label>
+                    <textarea name="otros" placeholder="Escribe un mensaje"></textarea>    
+                </div>
+                <div>
+                    <input id="btn" type="submit" value="Enviar"></input>
+                </div>
+            </form>
+        </div>
+
+        <h2 id="t_horarios">Horario de Atención:</h2>
+
+        <section id="horarios">
+            <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+            <p>Sábados y Domingos: Emergencias únicamente</p>
+            <p>Ubicación: Zimbabue</p>
+            <p>Si deseas visitarnos, contáctanos previamente.</p>
+            <p>Dirección: Save Valley Conservancy, Chishakwe Ranch, Zimbabue</p>
+        </section>
+    </div>   
+
+    <footer>
+        &copy; 2024 Wildscape - Todos los derechos reservados.
+    </footer>
+    <script src="js/footer.js"></script>
+</body>
+</html>
