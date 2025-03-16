@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wildscape - Rescue and Sanctuary Center</title>
+	<link rel="icon" type="image/x-icon" href="img/icon.png">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/contacto.css">
+	<!-- Se asume que ya tienes estos archivos en tu carpeta js/ -->
+	<script src="js/datos.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/validaciones.js"></script>
+	<script src="js/login.js"></script>
+</head>
+<body onload="loadMenus()">
+	<!-- Loading Screen -->
+	<div id="loading-screen">
+		<div class="loading-text">Cargando...</div>
+	</div>
+
+	<header>
+		<div class="logo">
+			<a href="index.html">Wildscape</a>
+		</div>
+		<nav>
+			<!-- loadMenus se encarga de cargar los enlaces -->
+		</nav>
+	</header>
+
+	<div class="main-content">
+		<section id="principal">
+			<h1>¡Contáctanos para salvar vidas!</h1>
+			<p>Nos dedicamos a rescatar, rehabilitar y reintroducir a la naturaleza animales en situación de vulnerabilidad. Si conoces un caso de un animal que necesita ayuda o quieres sumarte a nuestra causa como voluntario, ¡estamos aquí para escucharte! Tu apoyo puede marcar la diferencia en la conservación de especies.</p>
+			<p>Si quieres contactarnos te invitamos a rellenar el siguiente formulario:</p>
+		</section>
+
+		<div id="form-container">
+			<form onsubmit="return false">
+				<div class="fila">
+					<label>Nombre</label>
+					<input id="voluntario" name="nombre" placeholder="Ingresa tu nombre" /><br>
+					<p id="voluntario-error" class="error"></p>
+				</div>
+
+				<div class="fila">
+					<label>Correo electrónico</label>
+					<input id="email" type="email" name="email" placeholder="Ingresa tu correo" />
+					<p id="email-error" class="error"></p>
+				</div>
+
+				<div class="fila">
+					<label>Teléfono:</label>
+					<input
+						type="tel"
+						name="telefono"
+						id="telefono"
+						onblur="validarTelefono(this)"
+						onfocus="focusTelefono(this)"
+						placeholder="Ingresa tu teléfono"
+					/>
+					<p id="telefono-error" class="error"></p>
+				</div>
+
+				<div class="fila">
+					<label>Motivo:</label>
+					<select id="motivo">
+						<option value="">Selecciona un motivo</option>
+						<option value="Reportar un animal en peligro">Reportar un animal en peligro</option>
+						<option value="Información sobre adopción">Información sobre adopción</option>
+						<option value="Ser voluntario">Ser voluntario</option>
+						<option value="Donar">Donar</option>
+					</select>
+					<p id="motivo-error" class="error"></p>
+				</div>
+
+				<div class="fila">
+					<label>Otros</label>
+					<!-- 'otros' es opcional, así que no se validará si está vacío -->
+					<textarea id="otros" name="otros" placeholder="Escribe un mensaje (opcional)"></textarea>
+				</div>
+
+				<div>
+					<!-- Sólo se llama a anadir() si la validación retorna true -->
+					<button id="btn" onclick="if(validarFormulario()){ anadir(); } else { alert('Por favor, corrige los errores'); }">Añadir</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- Nuevo formulario de login -->
+		<div id="login-container">
+			<h3>Acceso de Administrador</h3>
+			<p>Inicie sesión para ver la lista de usuarios registrados</p>
+			<form id="login-form">
+				<input type="text" id="username" placeholder="Usuario" required>
+				<input type="password" id="password" placeholder="Contraseña" required>
+				<button type="button" id="login-button" onclick="verificarLogin()">Iniciar Sesión</button>
+			</form>
+			<p id="login-error" class="error"></p>
+		</div>
+
+		<!-- Sección de administrador (inicialmente oculta) -->
+		<div id="admin-section">
+			<h2 id="t_horarios">Lista de los usuarios:</h2>
+			<section id="tabla"></section>
+		</div>
+
+		<h2>Horario de Atención:</h2>
+		<section id="horarios">
+			<p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+			<p>Sábados y Domingos: Emergencias únicamente</p>
+			<p>Ubicación: Zimbabue</p>
+			<p>Si deseas visitarnos, contáctanos previamente.</p>
+			<p>Dirección: Save Valley Conservancy, Chishakwe Ranch, Zimbabue</p>
+		</section>
+	</div>
+
+	<footer>
+		&copy; 2024 Wildscape - Todos los derechos reservados.
+	</footer>
+
+	<script src="js/footer.js"></script>
+</body>
+</html>

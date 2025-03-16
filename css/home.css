@@ -1,0 +1,13 @@
+.main-content {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-content h1 {
+    min-height: 80px; /* Ajusta este valor según tu diseño */
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}

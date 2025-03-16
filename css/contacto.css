@@ -1,0 +1,237 @@
+body {
+    background: url('../img/home/sabana.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.main-content h1 {
+    margin-bottom: 5vh;
+}
+
+h1, h2, p {
+    color: white;
+}
+
+.main-content section {
+    width: 66%;
+    margin: 0 auto;
+}
+
+h3, li {
+    font-size: 1.2rem;
+}
+
+h2, h3 {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+#principal {
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    margin-left: 18%;
+}
+
+#t_horarios {
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    margin-right: 53%;
+}
+#horarios {
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+    margin-left: 19%;
+}
+
+#form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+#form-container form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+form .fila {
+    margin-bottom: 30px;
+}
+
+form .fila label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+form .fila select {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid white; 
+    color: white; 
+}
+
+form .fila select option {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+}
+
+form .fila input, form .fila select, form .fila textarea {
+    width: 100%;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+form .fila input::placeholder, form .fila textarea::placeholder {
+    color: #ddd;
+}
+
+form .fila textarea {
+    height: 80px;
+    resize: none;
+}
+
+#btn {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+    background-color: grey;
+    color: white;
+}
+
+/* Estilos para tablas */
+table, th, td {
+    border: 1px solid white;
+    min-width: 150px;
+    color: white;
+}
+
+.motivo {
+    width: 300px;
+}
+
+#tabla th {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#tabla tr.aprobado td {
+    background: rgba(255, 255, 255, 0.1);
+    color: #90EE90; /* Light green text color */
+}
+
+/* Action buttons styling */
+.action-btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.action-btn:hover {
+    background-color: rgba(50, 50, 50, 0.7);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.action-btn:disabled {
+    background-color: rgba(30, 30, 30, 0.4);
+    color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+.approve-btn {
+    background-color: rgba(40, 70, 40, 0.7);
+}
+
+.revert-btn {
+    background-color: rgba(40, 40, 70, 0.7);
+}
+
+.delete-btn {
+    background-color: rgba(70, 40, 40, 0.7);
+}
+
+/* Estilos para el login */
+#login-container {
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);  /* Mantiene el mismo fondo que el formulario principal */
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Asegura consistencia con el resto del sitio */
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 5px;  /* Mismo padding que el formulario principal */
+    background: transparent;  /* Fondo transparente */
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif; /* Misma fuente que el formulario principal */
+}
+
+#login-form input::placeholder {
+    color: #ddd;  /* Mismo color de placeholder que el formulario principal */
+}
+
+#login-button {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro como el tema general */
+    color: white; /* Texto blanco */
+    border: 1px solid white; /* Borde blanco para consistencia */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Arial', sans-serif; /* Misma fuente que el formulario principal */
+}
+
+#login-button:hover {
+    background-color: rgba(50, 50, 50, 0.9); /* Un poco más claro al pasar el ratón */
+    color: white;
+}
+
+#admin-section {
+    display: none;
+    width: 80%;
+    margin: 20px auto;
+}

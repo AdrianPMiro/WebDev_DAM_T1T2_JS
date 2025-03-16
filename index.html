@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wildscape - Rescue and Sanctuary Center</title>
+	<link rel="icon" type="image/x-icon" href="img/icon.png">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/home.css">
+	<!-- Arreglado el atributo src en lugar de scr -->
+	<script src="js/index.js"></script>
+</head>
+<body onload="loadMenus()">
+	<!-- Loading Screen -->
+	<div id="loading-screen">
+		<div class="loading-text">Cargando...</div>
+	</div>
+	<header>
+		<div class="logo">
+			<a href="index.html">Wildscape</a>
+		</div>
+		<nav>
+			<!--- loadMenus -->
+		</nav>
+	</header>
+	<div class="main-content">
+		<h1>Protegiendo especies. <i>Conservando maravillas salvajes.</i></h1>
+		<div class="subtitle">Cuidado y protección compasivo para especies amenazadas y en peligro de extinción</div>
+		<a href="galery.html" class="btn">Fotos</a>
+	</div>
+	<footer>
+		&copy; 2024 Wildscape - All Rights Reserved.
+	</footer>
+	<script src="js/footer.js"></script>
+	<script>
+		// Agregamos el listener para que nuestra función se ejecute junto a otros eventos "load"
+		window.addEventListener('load', function() {
+			// Array de mensajes para el título principal (h1)
+			const messages = [
+				"Protegiendo especies. <i>Conservando maravillas salvajes.</i>",
+				"Salvando hábitats. <i>Preservando el futuro.</i>",
+				"Cuidando la biodiversidad. <i>Santuario de vida.</i>",
+				"Rescatando animales. <i>Creando esperanza.</i>",
+				"Educando comunidades. <i>Inspirando cambios.</i>",
+				"Restaurando ecosistemas. <i>Sanando el planeta.</i>"
+			];
+			let index = 0;
+			const h1Element = document.querySelector(".main-content h1");
+			// Ejecuta una función cada 3 segundos que actualiza el contenido de h1
+			const intervalID = setInterval(function(){
+				index = (index + 1) % messages.length;
+				h1Element.innerHTML = messages[index];
+			}, 3000);
+			// Después de 15 segundos, cancela la ejecución repetida y ejecuta una función una sola vez
+			setTimeout(function(){
+				clearInterval(intervalID);
+				const subtitleElement = document.querySelector(".main-content .subtitle");
+				subtitleElement.innerHTML = "Bienvenidos a Wildscape: Donde la vida silvestre se une con el cuidado humano. Visítanos para aprender más.";
+			}, 15000);
+		});
+	</script>
+</body>
+</html>
