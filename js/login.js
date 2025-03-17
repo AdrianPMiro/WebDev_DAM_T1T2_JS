@@ -1,4 +1,3 @@
-// Genera la tabla usando los datos (js/datos.js) al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
   crearTabla('tabla', datos);
 });

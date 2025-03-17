@@ -1,17 +1,13 @@
 function validarFormulario() {
-  // Obtener los valores y quitar espacios en blanco
-  var nombre = document.getElementById("nombre").value.trim();
+  var nombre = document.getElementById("voluntario").value.trim();
   var email = document.getElementById("email").value.trim();
   var telefono = document.getElementById("telefono").value.trim();
   var motivo = document.getElementById("motivo").value;
-  
-  // Obtener elementos de error
   var nombreError = document.getElementById("voluntario-error");
   var emailError = document.getElementById("email-error");
   var telefonoError = document.getElementById("telefono-error");
   var motivoError = document.getElementById("motivo-error");
   
-  // Reiniciar mensajes de error
   nombreError.innerHTML = "";
   nombreError.style = "display:none";
   emailError.innerHTML = "";
@@ -21,31 +17,27 @@ function validarFormulario() {
   motivoError.innerHTML = "";
   motivoError.style = "display:none";
   
-  // Variable para verificar si hay errores
   var hayErrores = false;
   
-  // Validar nombre
   if (nombre === "") {
     nombreError.innerHTML = "El nombre es obligatorio";
     nombreError.style = "display:block";
     hayErrores = true;
   }
   
-  // Validar email
   if (email === "") {
     emailError.innerHTML = "El correo es obligatorio";
     emailError.style = "display:block";
     hayErrores = true;
   } else {
-    var atIndex = email.indexOf("@");
-    if (atIndex <= 0 || atIndex === email.length - 1) {
-      emailError.innerHTML = "El correo debe tener texto antes y después del '@'";
+    let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+    if (!regexEmail.test(email)) {
+      emailError.innerHTML = "Por favor, introduce un email válido";
       emailError.style = "display:block";
       hayErrores = true;
     }
   }
   
-  // Validar teléfono
   if (telefono === "") {
     telefonoError.innerHTML = "El teléfono es obligatorio";
     telefonoError.style = "display:block";
@@ -59,27 +51,21 @@ function validarFormulario() {
     }
   }
   
-  // Validar motivo
   if (motivo === "" || motivo === "0" || motivo === "-1") {
     motivoError.innerHTML = "Debe seleccionar un motivo";
     motivoError.style = "display:block";
     hayErrores = true;
   }
   
-  // Si hay errores, mostrar alerta general
   if (hayErrores) {
     return false;
   }
 
-  // Si todo está bien, se envía el formulario
   return true;
 }
 
-
-// Genera la tabla usando los datos (js/datos.js)
 crearTabla('tabla', datos);
 		
-// Función para verificar el login
 function verificarLogin() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -93,4 +79,23 @@ function verificarLogin() {
     loginError.innerHTML = "Usuario o contraseña incorrectos";
     adminSection.style.display = "none";
   }
+}
+
+function inicializarTooltips() {
+  document.getElementById("voluntario").title = "Ingrese su nombre completo";
+  document.getElementById("email").title = "Formato: usuario@dominio.com";
+  document.getElementById("telefono").title = "Debe contener 9 dígitos numéricos";
+  document.getElementById("motivo").title = "Seleccione el motivo de su consulta";
+  document.getElementById("otros").title = "Proporcione detalles adicionales si es necesario";
+  document.getElementById("email").addEventListener("focus", function() {
+    var tooltipBox = document.getElementById("tooltip-box");
+    if (!tooltipBox) {
+      tooltipBox = document.createElement("div");
+      tooltipBox.id = "tooltip-box";
+      tooltipBox.className = "tooltip-custom";
+      this.parentNode.appendChild(tooltipBox);
+    }
+    tooltipBox.innerHTML = "Formato correcto: usuario@dominio.com";
+    tooltipBox.style.display = "block";
+  });
 }

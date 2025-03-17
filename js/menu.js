@@ -1,11 +1,9 @@
-// menu.js
 
-// Menú para la página Rescate (voluntarios: David, Lucas, Sofía y Mateo)
 function buildRescateVolunteerMenu() {
   const menuData = [
     {
       title: "David",
-      mainLink: "#david",  // Al pulsar en "David" se dirigirá a <h2 id="david">David</h2>
+      mainLink: "#david", 
       submenus: [
         { title: "Descripción", link: "#david-descripcion" },
         { title: "Profesión", link: "#david-profesion" },
@@ -44,7 +42,6 @@ function buildRescateVolunteerMenu() {
   buildVolunteerMenu(menuData);
 }
 
-// Menú para la página Cuidado (ejemplo: Isabela, Valeria, Natalia y Camila)
 function buildCuidadoVolunteerMenu() {
   const menuData = [
     {
@@ -88,12 +85,10 @@ function buildCuidadoVolunteerMenu() {
   buildVolunteerMenu(menuData);
 }
 
-// Función genérica para construir el menú de voluntarios
 function buildVolunteerMenu(menuData) {
   const menuContainer = document.getElementById("local-menu");
   if (!menuContainer) return;
 
-  // Limpiar contenido previo (si lo hay)
   menuContainer.innerHTML = "";
 
   const ul = document.createElement("ul");
@@ -103,10 +98,9 @@ function buildVolunteerMenu(menuData) {
     const li = document.createElement("li");
     li.classList.add("volunteer-menu-item");
 
-    // Elemento principal: nombre del voluntario
     const a = document.createElement("a");
     a.textContent = vol.title;
-    a.href = vol.mainLink;  // Por ejemplo, "#david"
+    a.href = vol.mainLink;  
     li.appendChild(a);
 
     // Submenú: Descripción, Profesión y Hobbies
@@ -119,7 +113,7 @@ function buildVolunteerMenu(menuData) {
 
       const subA = document.createElement("a");
       subA.textContent = sub.title;
-      subA.href = sub.link;  // Por ejemplo, "#david-descripcion"
+      subA.href = sub.link;
       subLi.appendChild(subA);
       subUl.appendChild(subLi);
     });
@@ -131,7 +125,6 @@ function buildVolunteerMenu(menuData) {
   menuContainer.appendChild(ul);
 }
 
-// Función para configurar el comportamiento del botón "Sobre nosotros"
 function setupVolunteerMenuToggle() {
   const toggleBtn = document.getElementById("toggleLocalMenu");
   const menuContainer = document.getElementById("local-menu");

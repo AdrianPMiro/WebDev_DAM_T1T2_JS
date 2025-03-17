@@ -64,10 +64,13 @@ p {
     width: 100%;
     color: white;
     text-align: center;
+    border: 1px solid white;
+    transition: border-color 0.3s ease;
 }
 
 form .fila {
     margin-bottom: 30px;
+    position: relative;
 }
 
 form .fila label {
@@ -121,7 +124,6 @@ form .fila textarea {
     color: white;
 }
 
-/* Estilos para tablas */
 table, th, td {
     border: 1px solid white;
     min-width: 150px;
@@ -178,18 +180,17 @@ table, th, td {
     background-color: rgba(70, 40, 40, 0.7);
 }
 
-/* Estilos para el login */
 #login-container {
     margin: 30px auto;
     padding: 30px;
     border: 1px solid white;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5);  /* Mantiene el mismo fondo que el formulario principal */
+    background: rgba(0, 0, 0, 0.5);
     max-width: 400px;
     width: 100%;
     color: white;
     text-align: center;
-    font-family: 'Arial', sans-serif; /* Asegura consistencia con el resto del sitio */
+    font-family: 'Arial', sans-serif;
 }
 
 #login-form {
@@ -201,32 +202,32 @@ table, th, td {
 
 #login-form input {
     width: 100%;
-    padding: 5px;  /* Mismo padding que el formulario principal */
-    background: transparent;  /* Fondo transparente */
+    padding: 5px;  
+    background: transparent;
     border: 1px solid white;
     border-radius: 5px;
     color: white;
     font-size: 1rem;
-    font-family: 'Arial', sans-serif; /* Misma fuente que el formulario principal */
+    font-family: 'Arial', sans-serif;
 }
 
 #login-form input::placeholder {
-    color: #ddd;  /* Mismo color de placeholder que el formulario principal */
+    color: #ddd;
 }
 
 #login-button {
     padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro como el tema general */
-    color: white; /* Texto blanco */
-    border: 1px solid white; /* Borde blanco para consistencia */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'Arial', sans-serif; /* Misma fuente que el formulario principal */
+    font-family: 'Arial', sans-serif;
 }
 
 #login-button:hover {
-    background-color: rgba(50, 50, 50, 0.9); /* Un poco más claro al pasar el ratón */
+    background-color: rgba(50, 50, 50, 0.9);
     color: white;
 }
 
@@ -234,4 +235,39 @@ table, th, td {
     display: none;
     width: 80%;
     margin: 20px auto;
+}
+
+#validation-message {
+    color: white;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tooltip-custom {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  z-index: 1000;
+  max-width: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.campo-valido {
+  border-color: rgba(100, 255, 100, 0.6) !important;
+  background-color: rgba(40, 70, 40, 0.2) !important;
+}
+
+.campo-invalido {
+  border-color: rgba(255, 100, 100, 0.6) !important;
+  background-color: rgba(70, 40, 40, 0.2) !important;
 }

@@ -31,4 +31,15 @@ const loadMenus = () => {
     a.innerHTML = p.desc;
     navCont.appendChild(a);
   });
+  
+  checkScreenWidth();
 };
+
+const checkScreenWidth = () => {
+  if (screen.width < 700) {
+    document.body.style.color = "#FFEB3B";
+  } else {
+    document.body.style.color = "";
+  }
+};
+window.addEventListener('resize', checkScreenWidth);
